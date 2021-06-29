@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+div {
+  width: 50vw;
+}
+
+textarea {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
