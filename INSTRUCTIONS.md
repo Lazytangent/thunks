@@ -28,12 +28,12 @@ In this lecture, we will:
 1. Install the `redux-thunk` middleware.
 2. Import the `redux-thunk` middleware in our `src/store/index.js` file.
 3. Add it to our store as a middleware function.
-4. Take a look at the structure of a Thunk Creator in the
-   `src/store/articleReducer.js` file.
+4. Write a thunk creator to handle the GET request.
 5. Change the use of the action creator in the components to use our thunk
    creator instead.
-6. Move the asynchronous logic away from our React components into the
-   `articleReducer.js` file.
-7. Test it. Did it break?
-8. Let's rewrite the Thunk Creator with `fetch` and have it actually do thunk
-   things.
+6. Test it. Did it break?
+7. Write a thunk creator to handle the POST request.
+8. Change the use of the action creator in the components to use our thunk
+   creator instead.
+9. Test it. Did it break?
+10. Clean up our code.

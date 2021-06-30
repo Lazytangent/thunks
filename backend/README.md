@@ -6,13 +6,6 @@ This file documents the API routes made available by running this server.
 
 ## API Documentation
 
-### `GET /hello/world`
-
-A test route to generate an `XSRF-TOKEN` that will be used for forms.
-
-**Returns** a text response of `'Hello World!'` with a `_csrf` and a
-`XSRF-TOKEN` cookies attached.
-
 ### `POST /api/test`
 
 A test route to check that the request body is getting parsed correctly.
