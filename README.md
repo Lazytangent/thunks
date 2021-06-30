@@ -129,9 +129,18 @@ then when that call is done, update my Redux store?"
    from there
 7. Test our code. Does our Redux store update according to expectations?
 
+## More Resources
+
+If you're interested in reading more about Redux middleware and how they play
+with the Redux store, then check out Redux's documentation on
+[Middleware][redux-middleware] and [how the Redux store works with
+middleware][redux-store-docs].
+
 [Dave Ceddia]: https://daveceddia.com/what-is-a-thunk/
 [wikipedia-thunk]: https://en.wikipedia.org/wiki/Thunk
 [redux-thunk-git]: https://github.com/reduxjs/redux-thunk
 [redux-gif]: ./redux.gif
 [redux-thunk-gif]: ./redux-thunk.gif
 [Medium Article]: https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60#:~:text=Thunks%20in%20React%20%26%20Redux,be%20wrapped%20in%20a%20thunk.
+[redux-middleware]: https://redux.js.org/understanding/history-and-design/middleware
+[redux-store-docs]: https://redux.js.org/tutorials/fundamentals/part-4-store
