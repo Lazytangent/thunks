@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { addArticle } from "../../store/articleReducer";
 // 8. Replace import of action creator with thunk creator
+import { addArticle } from "../../store/articleReducer";
 import "./ArticleInput.css";
 
 const ArticleInput = () => {

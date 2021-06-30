@@ -4,8 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import SingleArticle from '../SingleArticle';
 import ArticleDetail from '../ArticleDetail';
-import { getArticles } from '../../store/articleReducer';
 // 5. Replace import of action creator with thunk creator
+import { getArticles } from '../../store/articleReducer';
 
 const ArticleList = () => {
   const dispatch = useDispatch();
