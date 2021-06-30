@@ -14,7 +14,9 @@ export const addArticle = (newArticle) => {
   };
 };
 
-// Create thunk creators
+// 4. Create thunk creator for GET request
+
+// 7. Create thunk creator for POST request
 
 const initialState = { articles: [], isLoading: true };
 
