@@ -2,6 +2,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
 import { addArticle } from "../../store/articleReducer";
+// Replace import of action creator with thunk creator
 import "./ArticleInput.css";
 
 const ArticleInput = () => {
@@ -26,6 +27,7 @@ const ArticleInput = () => {
       imageUrl,
     };
 
+    // Dispatch the return value of the thunk creator instead (the thunk)
     dispatch(addArticle(newArticle));
     reset();
   };

@@ -14,6 +14,8 @@ export const addArticle = (newArticle) => {
   };
 };
 
+// Create thunk creators
+
 const initialState = { articles: [], isLoading: true };
 
 const articleReducer = (state = initialState, action) => {
