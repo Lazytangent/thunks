@@ -25,7 +25,7 @@ test and ensure that our code, and in turn our application, works.
 
 In this lecture, we will:
 
-0. Set up the backend server with a database
+0. Set up our servers
 1. Install the `redux-thunk` middleware.
 2. Import the `redux-thunk` middleware in our `src/store/index.js` file.
 3. Add it to our store as a middleware function.
@@ -40,6 +40,12 @@ In this lecture, we will:
 10. Clean up our code.
 
 ## 0. See the README in the backend directory for instructions
+
+We can set up the backend server by following the setup instructions available
+in the backend README document.
+
+Afterwards, we can set up our frontend environment by installing dependencies
+in the frontend with `npm install` while we are in our `frontend` directory.
 
 ## 1. Install the `redux-thunk` middleware
 
