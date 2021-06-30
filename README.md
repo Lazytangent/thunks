@@ -11,6 +11,8 @@ In terms of its origin,
 > The term originated as a humorous, incorrect past participle of "think". That
 > is, a "thunk value" becomes available after its calculation routine is
 > thought through, or executed.
+>
+> [Wikipedia][wikipedia-thunk]
 
 To read more on the `redux-thunk` middleware, check out their
 [repo][redux-thunk-git].
@@ -128,6 +130,7 @@ then when that call is done, update my Redux store?"
 7. Test our code. Does our Redux store update according to expectations?
 
 [Dave Ceddia]: https://daveceddia.com/what-is-a-thunk/
+[wikipedia-thunk]: https://en.wikipedia.org/wiki/Thunk
 [redux-thunk-git]: https://github.com/reduxjs/redux-thunk
 [redux-gif]: ./redux.gif
 [redux-thunk-gif]: ./redux-thunk.gif
