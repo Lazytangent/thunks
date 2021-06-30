@@ -25,6 +25,7 @@ test and ensure that our code, and in turn our application, works.
 
 In this lecture, we will:
 
+0. Set up the backend server with a database
 1. Install the `redux-thunk` middleware.
 2. Import the `redux-thunk` middleware in our `src/store/index.js` file.
 3. Add it to our store as a middleware function.
@@ -37,3 +38,36 @@ In this lecture, we will:
    creator instead.
 9. Test it. Did it break?
 10. Clean up our code.
+
+## 0. See the README in the backend directory for instructions
+
+## 1. Install the `redux-thunk` middleware
+
+```sh
+npm install redux-thunk
+```
+
+## 2. Import `redux-thunk` in our `src/store/index.js` file
+
+```js
+// src/store/index.js
+// ... other imports
+import thunk from 'redux-thunk';
+
+// ... other code
+```
+
+## 3. Add it to our store as a middleware function
+
+```js
+// ... imports and reducer code
+
+let enhancer;
+
+if (process.env.NODE_ENV !== 'production') {
+  const logger = require('redux-logger').default;
+  const composeEnhancers =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true }) || compose;
+  enhancer = composeEnhancers(applyMiddleware(thunk, logger));
+}
+```
