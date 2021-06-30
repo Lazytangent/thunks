@@ -94,6 +94,39 @@ then when that call is done, update my Redux store?"
 
 ## How?
 
+1. Install the `redux-thunk` middleware.
+    * It *basically* looks like this.
+    ```js
+    function thunkMiddleware(store) {
+      return function wrapDispatch(next) {
+        return function handleAction(action) {
+          if (typeof action === 'function') {
+            return action(store.dispatch, store.getState);
+          }
+
+          return next(action);
+        }
+      }
+    }
+    ```
+
+    * With arrow function notation, this cleans up a bit.
+    ```js
+    const thunk = ({ dispatch, getState }) => (next) => (action) => {
+      if (typeof action === 'function')  {
+        return action(dispatch, getState);
+      }
+      return next(action);
+    };
+    ```
+2. Import the `redux-thunk` middleware in our `src/store/index.js` file.
+3. Add it to our store as a middleware function.
+4. Write our thunk creator function which returns a thunk
+5. Dispatch our thunk by invoking the thunk creator inside of a dispatch call
+6. Use our `useSelector` hook to subscribe to our Redux store and grab our data
+   from there
+7. Test our code. Does our Redux store update according to expectations?
+
 [Dave Ceddia]: https://daveceddia.com/what-is-a-thunk/
 [redux-thunk-git]: https://github.com/reduxjs/redux-thunk
 [redux-gif]: ./redux.gif
