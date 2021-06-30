@@ -50,7 +50,7 @@ npm install redux-thunk
 ## 2. Import `redux-thunk` in our `src/store/index.js` file
 
 ```js
-// src/store/index.js
+// frontend/src/store/index.js
 // ... other imports
 import thunk from 'redux-thunk';
 
@@ -71,3 +71,92 @@ if (process.env.NODE_ENV !== 'production') {
   enhancer = composeEnhancers(applyMiddleware(thunk, logger));
 }
 ```
+
+## 4. Write a thunk creator to handle the GET request.
+
+```js
+// frontend/src/store/articleReducer.js
+export const fetchArticles = () => async (dispatch) => {
+  const res = await fetch('/api/articles');
+  const articles = await res.json();
+  dispatch(getArticles(articles));
+};
+```
+
+## 5. Change the use of the action creator in the components to use our thunk creator instead.
+
+In this case, our change will be made in our `ArticleList` component.
+
+```js
+// frontend/src/components/ArticleList/index.js
+
+// import { getArticles } from '../../store/articleReducer';
+import { fetchArticles } from '../../store/articleReducer';
+
+// ... some code
+
+  dispatch(fetchArticles);
+
+// ... more code
+```
+
+## 6. Test it. Did it break?
+
+Check the functionality of the application.
+
+* Is anything missing?
+* What is different?
+* What is different in the Redux DevTools?
+
+## 7. Write a thunk creator to handle the POST request
+
+```js
+// frontend/src/store/articleReducer.js
+export const writeArticle = (payload) => async (dispatch) => {
+  const res = await fetch('/api/articles', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const newArticle = await res.json();
+
+  if (res.ok) {
+    dispatch(addArticle(newArticle));
+  }
+  return newArticle;
+};
+```
+
+## 8. Change the use of the action creator in the components to use our thunk creator instead.
+
+In this case, our change will be made in our `ArticleInput` component.
+
+```js
+// frontend/src/components/ArticleInput.js
+// import { addArticle } from '../../store/articleReducer';
+import { writeArticle } from '../../store/articleReducer';
+
+// ... some code
+
+  const newArticle = {
+    // id: nanoid(),
+    title: title,
+    body,
+    imageUrl,
+  };
+
+  dispatch(writeArticle(payload));
+```
+
+## 9. Test it. Did it break?
+
+Check the functionality of the application.
+
+* Is anything missing?
+* What is different?
+* What is different in the Redux DevTools?
+* What's happening in our backend?
+
+## 10. Clean up our code.
+
+Look for warnings and errors.
