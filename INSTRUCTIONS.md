@@ -42,7 +42,7 @@ In this lecture, we will:
 ## 0. See the README in the backend directory for instructions
 
 We can set up the backend server by following the setup instructions available
-in the backend README document.
+in the [backend README document][backend-readme].
 
 Afterwards, we can set up our frontend environment by installing dependencies
 in the frontend with `npm install` while we are in our `frontend` directory.
@@ -166,3 +166,5 @@ Check the functionality of the application.
 ## 10. Clean up our code.
 
 Look for warnings and errors.
+
+[backend-readme]: ./backend/README.md
