@@ -53,7 +53,7 @@ in the request built into the response as `req.body`:
 
 A route to fetch all the articles in the database.
 
-**Returns** a JSON response of the array of articles fetched from the database.
+**Returns** a JSON response of the array of articles (`Article[]`) fetched from the database.
 
 ### `POST /api/articles`
 
