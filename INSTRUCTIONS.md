@@ -44,6 +44,8 @@ In this lecture, we will:
 We can set up the backend server by following the setup instructions available
 in the backend README document.
 
+### 0b. After You've Set Up the Backend
+
 Afterwards, we can set up our frontend environment by installing dependencies
 in the frontend with `npm install` while we are in our `frontend` directory.
 
