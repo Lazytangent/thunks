@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 
-// 2. Install redux-thunk
+// 2. Import redux-thunk
 
 import articleReducer from './articleReducer';
 import fruitReducer from './fruitReducer';
