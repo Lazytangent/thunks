@@ -111,6 +111,7 @@ import { fetchArticles } from '../../store/articleReducer';
 Check the functionality of the application.
 
 * Is anything missing?
+    * Hint: There's something wrong with how `SingleArticle` is done now...
 * What is different?
 * What is different in the Redux DevTools?
 
