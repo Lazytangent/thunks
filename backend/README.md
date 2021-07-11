@@ -31,7 +31,7 @@ frontend can pass any `/api` calls to the backend server.
 Place the following at the bottom of your `frontend/package.json` file.
 
 ```json
-    "proxy": "http://localhost"
+    "proxy": "http://localhost:5000"
 ```
 
 ## API Documentation
