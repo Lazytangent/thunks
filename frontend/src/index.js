@@ -9,6 +9,8 @@ import './index.css';
 
 const store = configureStore();
 
+// Add a little something here to make testing easier
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
