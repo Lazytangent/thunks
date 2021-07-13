@@ -5,11 +5,16 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import configureStore from './store';
+import * as articleActions from './store/articleReducer';
 import './index.css';
 
 const store = configureStore();
 
-// Add a little something here to make testing easier
+// A little something to make testing easier
+if (process.env.NODE_ENV !== "production") {
+  window.store = store;
+  window.articleActions = articleActions;
+}
 
 ReactDOM.render(
   <React.StrictMode>
