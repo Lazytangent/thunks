@@ -18,6 +18,9 @@ if (process.env.NODE_ENV !== 'production') {
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true }) || compose;
   // 3. Add the middleware function to our store
   enhancer = composeEnhancers(applyMiddleware(logger));
+} else {
+  // 3. Add the middleware function to our store
+  enhancer = applyMiddleware(logger);
 }
 
 const configureStore = (preloadedState) => {
