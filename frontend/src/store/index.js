@@ -20,7 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
   enhancer = composeEnhancers(applyMiddleware(logger));
 } else {
   // 3. Add the middleware function to our store
-  enhancer = applyMiddleware(logger);
+  enhancer = applyMiddleware();
 }
 
 const configureStore = (preloadedState) => {
