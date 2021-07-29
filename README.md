@@ -2,7 +2,7 @@
 
 <details open>
 
-<summary>Set Up</summary>
+<summary><h2>Set Up</h2></summary>
 
 ### Backend
 
