@@ -1,6 +1,6 @@
 # Thunks
 
-<detail open>
+<details open>
 
 ## Set Up
 
@@ -29,7 +29,7 @@ CREATE USER article_app WITH PASSWORD '«your password here»' CREATEDB;
 2. `cd` into the `frontend` directory
 3. Run `npm install` to install dependencies
 
-</detail>
+</details>
 
 ## What is a Thunk?
 
