@@ -1,5 +1,36 @@
 # Thunks
 
+<detail open>
+
+## Set Up
+
+### Backend
+
+1. `cd` into the `backend` directory
+2. Run `npm install` to install dependencies
+3. Create a `.env` file based off the `.env.example` found in the backend
+   directory
+4. Using `psql`, create a user in your database based off the username and password you gave
+   in the `.env` file
+
+```sql
+CREATE USER article_app WITH PASSWORD '«your password here»' CREATEDB;
+```
+
+5. Exit the `psql` interface with `\q`
+6. Run `npx dotenv sequelize db:create`
+7. Run `npx dotenv sequelize db:migrate`
+8. Run `npx dotenv sequelize db:seed:all`
+9. Run `npm start` to start the application
+
+### Frontend
+
+1. Open another terminal
+2. `cd` into the `frontend` directory
+3. Run `npm install` to install dependencies
+
+</detail>
+
 ## What is a Thunk?
 
 Simply put, it is
