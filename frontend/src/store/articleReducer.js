@@ -3,15 +3,13 @@ import articles from '../data/data.json';
 const GET_ARTICLES = 'article/getArticles';
 const ADD_ARTICLE = 'article/addArticle';
 
+export const addArticle = (newArticle) => ({
+  type: ADD_ARTICLE,
+  newArticle,
+});
+
 export const getArticles = () => {
   return { type: GET_ARTICLES, articles };
-};
-
-export const addArticle = (newArticle) => {
-  return {
-    type: ADD_ARTICLE,
-    newArticle,
-  };
 };
 
 // 4. Create thunk creator for GET request
@@ -29,6 +27,7 @@ const articleReducer = (state = initialState, action) => {
         newState.entries[article.id] = article;
       });
       return newState;
+
       // return { ...state, entries: [...action.articles] };
     case ADD_ARTICLE:
       return {
