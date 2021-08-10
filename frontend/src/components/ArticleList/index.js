@@ -10,7 +10,8 @@ import { getArticles } from '../../store/articleReducer';
 const ArticleList = () => {
   const dispatch = useDispatch();
 
-  const articles = useSelector((state) => state.articleState.articles);
+  // const articles = useSelector((state) => state.articleState.entries);
+  const articles = useSelector((state) => Object.values(state.articleState.entries));
 
   useEffect(() => {
     // 5. Dispatch the return value of the thunk creator instead (the thunk)
