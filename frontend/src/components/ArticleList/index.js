@@ -22,9 +22,9 @@ const ArticleList = () => {
     <div>
       <h1>ArticleList</h1>
       <ol>
-        {articles?.map(({ id, title }) => {
-          return <ArticleDetail key={id} id={id} title={title} />;
-        })}
+        {articles?.map(({ id, title }) => (
+          <ArticleDetail key={id} id={id} title={title} />
+        ))}
       </ol>
 
       <Switch>
