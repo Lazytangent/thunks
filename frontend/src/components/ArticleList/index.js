@@ -10,7 +10,6 @@ import { getArticles } from '../../store/articleReducer';
 const ArticleList = () => {
   const dispatch = useDispatch();
 
-  // const articles = useSelector((state) => state.articleState.entries);
   const articles = useSelector((state) => Object.values(state.articleState.entries));
 
   useEffect(() => {

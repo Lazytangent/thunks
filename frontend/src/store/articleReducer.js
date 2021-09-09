@@ -17,30 +17,12 @@ export const getArticles = () => {
 // 7. Create thunk creator for POST request
 
 const initialState = { entries: [], isLoading: true };
-// const initialState = { entries: {}, isLoading: true };
 
 const articleReducer = (state = initialState, action) => {
-  // let newState = { ...state };
   switch (action.type) {
     case GET_ARTICLES:
-    //   action.articles.forEach((article) => {
-    //     newState.entries[article.id] = article;
-    //   });
-    //   return newState;
-
       return { ...state, entries: [...action.articles] };
     case ADD_ARTICLE:
-      // return {
-      //   ...state,
-      //   entries: {
-      //     ...state.entries,
-      //     [action.newArticle.id]: action.newArticle,
-      //   },
-      // };
-
-      // newState.entries[action.newArticle.id] = action.newArticle;
-      // return newState;
-
       return { ...state, entries: [...state.entries, action.newArticle] };
     default:
       return state;
