@@ -1,10 +1,6 @@
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('./utils');
 
-const id = check('id')
-  .notEmpty()
-  .isInt({ min: 0 });
-
 const title = check('title')
   .notEmpty()
   .withMessage('Title must not be empty.');
@@ -26,8 +22,3 @@ const validateCreate = [
 ];
 
 exports.validateCreate = validateCreate;
-
-exports.validateUpate = [
-  id,
-  validateCreate,
-];
