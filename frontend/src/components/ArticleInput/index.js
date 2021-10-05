@@ -22,7 +22,7 @@ const ArticleInput = () => {
     e.preventDefault();
     const newArticle = {
       id: nanoid(),
-      title: title,
+      title,
       body,
       imageUrl,
     };

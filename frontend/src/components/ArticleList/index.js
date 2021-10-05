@@ -5,23 +5,23 @@ import { Route, Switch } from 'react-router-dom';
 import SingleArticle from '../SingleArticle';
 import ArticleDetail from '../ArticleDetail';
 // 5. Replace import of action creator with thunk creator
-import { getArticles } from '../../store/articleReducer';
+import { loadArticles } from '../../store/articleReducer';
 
 const ArticleList = () => {
   const dispatch = useDispatch();
 
-  const articles = useSelector((state) => Object.values(state.articleState.entries));
+  const articles = useSelector((state) => state.articleState.entries);
 
   useEffect(() => {
     // 5. Dispatch the return value of the thunk creator instead (the thunk)
-    dispatch(getArticles());
+    dispatch(loadArticles());
   }, [dispatch]);
 
   return (
     <div>
       <h1>ArticleList</h1>
       <ol>
-        {articles?.map(({ id, title }) => (
+        {articles.map(({ id, title }) => (
           <ArticleDetail key={id} id={id} title={title} />
         ))}
       </ol>
