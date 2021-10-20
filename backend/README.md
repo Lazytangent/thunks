@@ -20,6 +20,10 @@ matches the one described in the `.env` file. We'll be using `dotenv` with
 After quitting out of the `psql` instance, you can run the following commands to
 finish database setup.
 
+* `npm run db:setup`
+
+This command will run the following three in order:
+
 * `npx dotenv sequelize db:create`
 * `npx dotenv sequelize db:migrate`
 * `npx dotenv sequelize db:seed:all`
