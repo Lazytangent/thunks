@@ -55,6 +55,7 @@ const ArticleInput = () => {
           onChange={(e) => setBody(e.target.value)}
           name="body"
           placeholder="Add your entry"
+          rows="10"
         ></textarea>
         <button type="submit">Submit</button>
       </form>
