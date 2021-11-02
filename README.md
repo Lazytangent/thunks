@@ -18,10 +18,8 @@ CREATE USER article_app WITH PASSWORD '«your password here»' CREATEDB;
 ```
 
 5. Exit the `psql` interface with `\q`
-6. Run `npx dotenv sequelize db:create`
-7. Run `npx dotenv sequelize db:migrate`
-8. Run `npx dotenv sequelize db:seed:all`
-9. Run `npm start` to start the application
+6. Run `npm run db:setup`
+7. Run `npm start` to start the application
 
 ### Frontend
 
